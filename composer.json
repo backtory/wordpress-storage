@@ -1,0 +1,18 @@
+{
+  "name": "backtory/storage-wp",
+  "description": "Wordpress Plugin for Backtory Cloud Storage :)",
+  "version": "v1.0.0",
+  "type": "library",
+  "require": {
+    "backtory/storage-php": "dev-master"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Abbas Moazzami",
+      "email": "www.abbas.mg@gmail.com",
+      "role": "developer",
+      "homepage": "http://amgir.ir"
+    }
+  ]
+}
