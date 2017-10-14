@@ -53,7 +53,7 @@ function backtory_file_transfer($id, $force = null) {
 
     $address = BacktoryStorage::put($dir . $fileName, $storagePath);
 
-    if (!wp_attachment_is_image($id) || !extension_loaded('gb')) {
+    if (!wp_attachment_is_image($id)) {
         if (isset($address[0])) {
             add_metadata("post", $id, BACKTORY_META, $address[0]);
         }
@@ -61,11 +61,16 @@ function backtory_file_transfer($id, $force = null) {
         if ($remove) {
             unlink($dir . $fileName);
         }
+
         return;
     }
 
     $files = [];
     $metadata = wp_generate_attachment_metadata($id, $dir . $fileName);
+    if (empty($metadata) || !isset($metadata['sizes'])) {
+        return;
+    }
+
     foreach ($metadata['sizes'] as $image) {
         $files[] = [
             Keys::FILE => fopen($dir . $image['file'], 'r'),
@@ -101,13 +106,19 @@ function backtory_file_remove($id) {
     try {
         BacktoryStorage::delete($path);
 
-        if (!wp_attachment_is_image($id) || !extension_loaded('gd')) {
+        if (!wp_attachment_is_image($id)) {
             delete_metadata('post', $id, BACKTORY_META);
+
             return;
         }
 
         $dir = dirname($path);
         $meta = get_metadata('post', $id, '_wp_attachment_metadata');
+        if (empty($meta) || !isset($meta[0]) || !isset($meta[0]['sizes'])) {
+            delete_metadata('post', $id, BACKTORY_META);
+
+            return;
+        }
 
         foreach ($meta[0]['sizes'] as $image) {
             BacktoryStorage::delete($dir . '/' . $image['file']);
@@ -141,7 +152,7 @@ function backtory_file_download($id) {
         if (wp_attachment_is_image($id)) {
             $meta = get_metadata('post', $id, '_wp_attachment_metadata');
 
-            if (isset($meta[0]) && isset($meta[0]['sizes'])) {
+            if (!empty($meta) && isset($meta[0]) && isset($meta[0]['sizes'])) {
                 foreach ($meta[0]['sizes'] as $image) {
                     BacktoryStorage::get(dirname($path) . '/' . $image['file'], $dest);
                 }

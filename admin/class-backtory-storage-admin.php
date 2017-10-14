@@ -180,4 +180,10 @@ class Backtory_Storage_Admin {
             );
     }
 
+    /**
+     * @return bool
+     */
+    public function srcset_image_status() {
+        return false;
+    }
 }

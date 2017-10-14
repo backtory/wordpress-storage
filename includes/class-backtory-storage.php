@@ -176,6 +176,7 @@ class Backtory_Storage {
 		$this->loader->add_filter('bulk_actions-upload', $plugin_admin, 'test_filter');
         $this->loader->add_filter('media_row_actions', $plugin_admin, 'row_filter', true, true);
         $this->loader->add_filter('wp_get_attachment_url', $plugin_admin, 'attachment_url', true, true);
+        $this->loader->add_filter('max_srcset_image_width', $plugin_admin, 'srcset_image_status');
 	}
 
 	/**
