@@ -87,7 +87,7 @@
             </tr>
             <tr valign="top">
                 <th scope="row">
-                    <label for="<?php echo BACKTORY_WHITE_LIST_EXTENSIONS ?>">Backtory white list extensions</label>
+                    <label for="<?php echo BACKTORY_WHITE_LIST_EXTENSIONS ?>">white list extensions</label>
                 </th>
                 <td>
                     <input class="regular-text" id="<?php echo BACKTORY_WHITE_LIST_EXTENSIONS ?>"
