@@ -7,6 +7,6 @@ if (empty($metadata)): ?>
 <?php else: ?>
     <div class="misc-pub-section misc-pub-attachment">
         <div><a href="<?php echo admin_url("?backtory_action=remove&id={$_GET['post']}") ?>">remove from backtory</a></div>
-        <div><a href="<?php echo admin_url("?backtory_action=copy&id={$_GET['post']}") ?>">download from backtory</a></div>
+        <div><a href="<?php echo admin_url("?backtory_action=copy&id={$_GET['post']}") ?>">copy from backtory</a></div>
     </div>
 <?php endif;

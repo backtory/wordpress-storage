@@ -335,7 +335,7 @@ if ($is_IE && strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 7') !== false)
                                             <br>
                                             <a href="<?php echo admin_url("?backtory_action=move&id=") ?>{{ data.id }}">move to backtory</a> |
                                             <a href="<?php echo admin_url("?backtory_action=remove&id=") ?>{{ data.id }}">remove from backtory</a> |
-                                            <a href="<?php echo admin_url("?backtory_action=copy&id=") ?>{{ data.id }}">download from backtory</a>
+                                            <a href="<?php echo admin_url("?backtory_action=copy&id=") ?>{{ data.id }}">copy from backtory</a>
 
             </div>
 

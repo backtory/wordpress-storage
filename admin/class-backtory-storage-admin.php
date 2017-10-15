@@ -98,9 +98,9 @@ class Backtory_Storage_Admin {
     public function row_filter($actions, $post = null) {
         $meta = get_metadata('post', $post->ID, BACKTORY_META);
         if (empty($meta)) {
-            $actions[BACKTORY_BULK_ACTION_MOVE] = "<a href='" . admin_url("?backtory_action=move&id={$post->ID}") . "'>" . __("move to cloud") . '</a>';
+            $actions[BACKTORY_BULK_ACTION_MOVE] = "<a href='" . admin_url("?backtory_action=move&id={$post->ID}") . "'>" . __("move to backtory") . '</a>';
         } else {
-            $actions[BACKTORY_BULK_ACTION_REMOVE] = "<a href='" . admin_url("?backtory_action=remove&id={$post->ID}") . "'>" . __("remove from bt") . '</a>';
+            $actions[BACKTORY_BULK_ACTION_REMOVE] = "<a href='" . admin_url("?backtory_action=remove&id={$post->ID}") . "'>" . __("remove from backtory") . '</a>';
             $actions[BACKTORY_BULK_ACTION_COPY] = "<a href='" . admin_url("?backtory_action=copy&id={$post->ID}") . "'>" . __("copy to server") . '</a>';
         }
 
