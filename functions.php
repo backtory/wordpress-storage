@@ -15,11 +15,11 @@ if (!function_exists('wp_get_current_user')) {
 function initBacktory() {
     if (!empty(get_option(X_BACKTORY_AUTHENTICATION_ID) &&
         !empty(get_option(X_BACKTORY_AUTHENTICATION_KEY)) &&
-        !empty(get_option(X_BACKTORY_OBJECT_STORAGE_ID)))) {
+        !empty(get_option(X_BACKTORY_STORAGE_ID)))) {
         BacktoryStorage::init(
             get_option(X_BACKTORY_AUTHENTICATION_ID),
             get_option(X_BACKTORY_AUTHENTICATION_KEY),
-            get_option(X_BACKTORY_OBJECT_STORAGE_ID)
+            get_option(X_BACKTORY_STORAGE_ID)
         );
     }
 }

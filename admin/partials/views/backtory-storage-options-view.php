@@ -46,12 +46,12 @@
             </tr>
             <tr valign="top">
                 <th scope="row">
-                    <label for="<?php echo X_BACKTORY_OBJECT_STORAGE_ID ?>">X-Backtory-Object-Storage-Id</label>
+                    <label for="<?php echo X_BACKTORY_STORAGE_ID ?>">X-Backtory-Storage-Id</label>
                 </th>
                 <td>
-                    <input class="regular-text" type="text" id="<?php echo X_BACKTORY_OBJECT_STORAGE_ID ?>"
-                           name="<?php echo X_BACKTORY_OBJECT_STORAGE_ID ?>"
-                           value="<?php echo get_option(X_BACKTORY_OBJECT_STORAGE_ID); ?>" dir="ltr"/>
+                    <input class="regular-text" type="text" id="<?php echo X_BACKTORY_STORAGE_ID ?>"
+                           name="<?php echo X_BACKTORY_STORAGE_ID ?>"
+                           value="<?php echo get_option(X_BACKTORY_STORAGE_ID); ?>" dir="ltr"/>
                 </td>
             </tr>
             <tr valign="top">

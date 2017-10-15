@@ -2,7 +2,7 @@
 
 const X_BACKTORY_AUTHENTICATION_ID = "backtory_authentication_id";
 const X_BACKTORY_AUTHENTICATION_KEY = "backtory_authentication_key";
-const X_BACKTORY_OBJECT_STORAGE_ID = "backtory_object_storage_id";
+const X_BACKTORY_STORAGE_ID = "backtory_storage_id";
 const BACKTORY_DOMAIN = "backtory_domain";
 
 const BACKTORY_UPLOAD_PATH = "backtory_path";

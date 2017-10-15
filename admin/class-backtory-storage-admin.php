@@ -59,7 +59,7 @@ class Backtory_Storage_Admin {
     public function register_option_fields() {
         add_option( X_BACKTORY_AUTHENTICATION_ID );
         add_option( X_BACKTORY_AUTHENTICATION_KEY );
-        add_option( X_BACKTORY_OBJECT_STORAGE_ID );
+        add_option( X_BACKTORY_STORAGE_ID );
         add_option( BACKTORY_BUCKET);
         add_option( BACKTORY_DOMAIN , BACKTORY_STORAGE_URL );
         add_option( BACKTORY_UPLOAD_PATH, BACKTORY_DEFAULT_PATH );
@@ -68,7 +68,7 @@ class Backtory_Storage_Admin {
         add_option( BACKTORY_WHITE_LIST_EXTENSIONS );
 
         register_setting( 'backtory_storage', X_BACKTORY_AUTHENTICATION_ID );
-        register_setting( 'backtory_storage', X_BACKTORY_OBJECT_STORAGE_ID );
+        register_setting( 'backtory_storage', X_BACKTORY_STORAGE_ID );
         register_setting( 'backtory_storage', X_BACKTORY_AUTHENTICATION_KEY );
         register_setting( 'backtory_storage', BACKTORY_DOMAIN );
         register_setting( 'backtory_storage', BACKTORY_UPLOAD_PATH );
