@@ -4,6 +4,7 @@ use Backtory\Storage\Core\Contract\Keys;
 use Backtory\Storage\Core\Exception\BacktoryException;
 use Backtory\Storage\Core\Facade\BacktoryStorage;
 
+@ini_set('max_execution_time', 0);
 
 if (!function_exists('wp_generate_attachment_metadata')) {
     include(ABSPATH . "wp-admin/includes/image.php");
