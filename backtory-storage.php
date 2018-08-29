@@ -33,8 +33,11 @@ set_time_limit(0);
 require_once "vendor/autoload.php";
 require_once "const.php";
 require_once "functions.php";
-require_once "admin/partials/backtory-storage-actions.php";
-require_once "admin/partials/backtory-storage-templates.php";
+
+if (is_admin()) {
+    require_once "admin/partials/backtory-storage-actions.php";
+    require_once "admin/partials/backtory-storage-templates.php";
+}
 
 define( 'PLUGIN_VERSION', '1.0.0' );
 
